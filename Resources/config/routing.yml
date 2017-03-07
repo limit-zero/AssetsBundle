@@ -1,0 +1,14 @@
+limit0_assets_upload:
+    path: /asset-upload
+    methods: [ POST ]
+    defaults: { _controller: Limit0AssetsBundle:Asset:upload, _format: json }
+
+limit0_assets_base64_upload:
+    path: /asset
+    methods: [ POST ]
+    defaults: { _controller: Limit0AssetsBundle:Asset:uploadBase64, _format: json }
+
+limit0_assets_delete:
+    path: /asset
+    methods: [ DELETE ]
+    defaults: { _controller: Limit0AssetsBundle:Asset:delete, _format: json }

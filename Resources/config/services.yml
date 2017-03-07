@@ -1,0 +1,16 @@
+services:
+
+    limit0_assets.engine.local_storage:
+        class: Limit0\Assets\StorageEngine\LocalStorageEngine
+        public: false
+
+    limit0_assets.engine.aws_s3:
+        class: Limit0\Assets\StorageEngine\AmazonS3StorageEngine
+        public: false
+
+    limit0_assets.manager:
+        class: Limit0\Assets\AssetManager
+
+    limit0_assets.processor:
+        class: Limit0\AssetsBundle\AssetProcessor
+        arguments: [ '@as3_modlr.store', '@limit0_assets.manager', '%limit0_assets.http_prefix%' ]

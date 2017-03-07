@@ -1,0 +1,25 @@
+{
+    "name": "limit0/assets-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "type": "library",
+    "description": "Implements image upload support for projects utilizing limit0/assets",
+    "authors": [
+        {
+            "name": "Josh Worden",
+            "email": "josh@limit0.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Limit0\\AssetsBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "symfony/framework-bundle": ">=2.0 <2.7 || ^3.0",
+        "symfony/yaml": ">=2.0 <2.7 || ^3.0",
+        "as3/modlr-bundle": "dev-master",
+        "limit0/assets": "~1.0"
+    }
+}
